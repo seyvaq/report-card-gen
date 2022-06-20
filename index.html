@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SpringGate Report Card Generator</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+
+
+    <link href="css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+    <nav class="navbar-default navbar-static-side unprintable" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="logo-element">
+                        IN+
+                    </div>
+                </li>
+                <li class="landing_link">
+                    <a href="#"><i class="fa fa-star"></i> <span class="nav-label">Card Generator</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-database"></i> <span class="nav-label">Past Cards</span> <span class="label label-warning float-right">In Progress</span></a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+        </div>
+            <div class="row wrapper border-bottom white-bg page-heading unprintable">
+                <div class="col-lg-10">
+                    <h2>Report Card Generator</h2>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active">
+                            <strong>SpringGate Academy</strong>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+            <div class="col-lg-6 unprintable">
+                <div class="ibox ">
+                    <div class="ibox-title">
+                        <h5>Report Card Details <small>Fill in the detiails below.</small></h5>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <form role="form">
+                                    <div class="form-group"><label>Name</label> <input type="name" placeholder="Student Name" class="form-control" id="studentNamef"></div>
+                                    <div class="form-group"><label>Date Issued</label> <input type="date" class="form-control" id="dateIssuedf"></div>
+                                    <div class="form-group"><label>Year and Term</label> <input type="text" placeholder="Year 10 Term 3" class="form-control" id="yearTermf"></div>
+                                    <div class="row">
+                                      <div class="col">
+                                        <div class="form-group"><label>Term Start Date</label> <input type="date" class="form-control" id="termStartf"></div>
+                                      </div>
+                                      <div class="col">
+                                        <div class="form-group"><label>Term End Date</label> <input type="date" class="form-control" id="termEndf"></div>
+                                      </div>
+                                    </div>
+
+                                    <div class="form-group"><label>PTC Date</label> <input type="date" class="form-control" id="ptcDatef"></div>
+                                    <div class="form-group"><label>Class Teacher Name</label> <input type="text" class="form-control" id="classTeacherf"></div>
+
+                                    <div class="mt-3">
+                                        <a class="btn btn-primary btn-block" type="" id="buttonSave" style="color:white;"><strong>Save</strong></a>
+                                    </div>
+                                </form>
+
+                                <div class="row mt-3">
+                                  <div class="col-sm-12">
+                                    <form id="formAdd">
+                                      <label>Subject Add</label>
+                                      <div class="row">
+                                        <div class="col-6 col-sm-2">
+                                          <div class="form-group"><label>Subject</label>
+                                            <select class="form-control" id="s1c1f">
+                                                <option>English</option>
+                                                <option>Mathematics</option>
+                                                <option>Science</option>
+                                                <option>History</option>
+                                                <option>Geography</option>
+                                                <option>Mandarin</option>
+                                                <option>Bahasa Malaysia</option>
+                                              </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm-2">
+                                          <div class="form-group"><label>Teacher</label>
+                                            <select class="form-control" id="s1c2f">
+                                                <option>Ms. Gurujit</option>
+                                                <option>Ms. Sokh</option>
+                                                <option>Ms. Azizah</option>
+                                                <option>Ms. Pam</option>
+                                                <option>Ms. Kay</option>
+                                                <option>Ms. Fazila</option>
+                                              </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm-2">
+                                          <div class="form-group"><label>Test #1</label> <input type="number" class="form-control" min="0" max="100" placeholder="100" id="s1c3f"></div>
+                                        </div>
+                                        <div class="col-6 col-sm-2">
+                                          <div class="form-group"><label>Test #2</label> <input type="number" class="form-control" min="0" max="100" placeholder="100" id="s1c4f"></div>
+                                        </div>
+                                        <div class="col-6 col-sm-2">
+                                          <div class="form-group"><label>Term Exam</label> <input type="number" class="form-control" min="0" max="100" placeholder="100" id="s1c5f"></div>
+                                        </div>
+                                        <div class="col-6 col-sm-2">
+                                          <div class="form-group"><label>Letter Grade</label> <input type="text" class="form-control" maxlength="2" id="s1c6f"></div>
+                                        </div>
+                                      </div>
+
+                                      <div class="mt-3">
+                                          <a class="btn btn-primary btn-block" type="submit" style="color:white;" id="buttonAddSubject"><strong>+ Add Subject</strong></a>
+                                      </div>
+                                    </form>
+                                  </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 printable-col">
+              <div class="ibox printable-ibox">
+                  <div class="ibox-content printable">
+                      <div class="row d-flex justify-content-center text-center mt-5">
+                        <img src="logo-springgate.png" alt="" style="width:auto; height:15em;">
+                      </div>
+                      <div class="row d-flex justify-content-center text-center mt-2">
+                        <h2 class="springgate" style="font-size:3em; margin-bottom:0;"><span style="font-size:1.4em;"><strong>Spring</strong>Gate</span><br>Academy</h2>
+                      </div>
+                      <div class="row d-flex justify-content-center text-center">
+                        <p class="empowering"><i>Empowering Future Changemakers</i></p>
+                      </div>
+
+                      <div class="row justify-content-center text-center">
+                        <p style="font-size:2em; margin-bottom:0;">Report Card of <span id="studentName">Student Name</span></p>
+                      </div>
+                      <div class="row justify-content-center text-center">
+                        <p style="font-size:1.5em; margin-bottom:0;">Issued on <span id="dateIssued">[Date of Issue]</span></p>
+                      </div>
+                      <div class="row justify-content-center text-center">
+                        <p style="font-size:1.3em; margin-bottom:0;" id="yearTerm">[Year and Term]</p>
+                      </div>
+                      <div class="row justify-content-center text-center">
+                        <p style="font-size:1.3em;"><span id="termStart">[Term Start Date]</span> - <span id="termEnd">[Term End Date]</span></p>
+                      </div>
+
+                      <div class="row justify-content-center text-center">
+                        <div class="col-10">
+                        <table class="table table-bordered printable-table-body">
+                          <thead>
+                            <tr class="printable-table">
+                              <th scope="col">Subject<br>Name</th>
+                              <th scope="col">Subject<br>Teacher</th>
+                              <th scope="col">Test<br>#1</th>
+                              <th scope="col">Test<br>#2</th>
+                              <th scope="col">Term<br>Exam</th>
+                              <th scope="col">Term Exam<br>Letter Grade</th>
+                            </tr>
+                          </thead>
+                          <tbody id="tableBody">
+
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+
+                    <div class="row justify-content-center text-center">
+                      <p style="font-size:1em;">Subjects are graded from 0% (U - Ungraded) to 100% (A*), with grades below 60% (C) reported as non-passing.
+                        <br>
+                        For additional information, please refer to a staff member of SpringGate Academy.</p>
+                    </div>
+
+
+                  <div class="col-10 offset-1">
+                    <div class="row pt-5">
+                      <div class="col justify-content-center text-center">
+                        <p style="font-size:1.3em;">Class Teacher's Signature</p>
+                        <hr style="border-top: 1.5px dashed; width:60%; margin-top:6em; margin-bottom: 1em;">
+                        <p style="font-size:1em; margin-bottom: 0;" id="classTeacher">[Class Teacher Name]</p>
+                        <p style="font-size:1em;"><i>Date Issued: <span id="dateIssued1">[Date Issued]</span></i></p>
+                      </div>
+                      <div class="col justify-content-center text-center">
+                        <p style="font-size:1.3em;">Principal's Signature</p>
+                        <hr style="border-top: 1.5px dashed; width:60%; margin-top:6em; margin-bottom: 1em;">
+                        <p style="font-size:1em; margin-bottom: 0;">Foo Chee Fong</p>
+                        <p style="font-size:1em;"><i>Date Issued: <span id="dateIssued2">[Date Issued]</span></i></p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row printable-footer" style="margin-top:10em;">
+                    <div class="col justify-content-center text-center">
+                      <p style="margin-bottom:0; font-size:1.15em;" class="springgate"><strong>Spring</strong>Gate Academy</p>
+                      <p style="margin-bottom:0;">Parent Teacher Conference</p>
+                      <p style="margin-bottom:0;" id="ptcDate">[PTC Date]</p>
+                    </div>
+                  </div>
+
+                  </div>
+              </div>
+            </div>
+            </div>
+
+        </div>
+        <div class="footer unprintable">
+            <div>
+                <strong>Copyright</strong> Seyvaq Singh &copy; 2022
+            </div>
+        </div>
+
+        </div>
+        </div>
+
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.i-checks').iCheck({
+                    checkboxClass: 'icheckbox_square-green',
+                    radioClass: 'iradio_square-green',
+                });
+            });
+        </script>
+
+        <script>
+          $( "#buttonSave" ).click(function() {
+              $('#s1c1').html($('#s1c1f').find(':selected').text());
+              $('#s1c2').html($('#s1c2f').find(':selected').text());
+              $('#s1c3').html($('#s1c3f').val());
+              $('#s1c4').html($('#s1c4f').val());
+              $('#s1c5').html($('#s1c5f').val());
+              $('#s1c6').html($('#s1c6f').val());
+
+              $('#s2c1').html($('#s2c1f').find(':selected').text());
+              $('#s2c2').html($('#s2c2f').find(':selected').text());
+              $('#s2c3').html($('#s2c3f').val());
+              $('#s2c4').html($('#s2c4f').val());
+              $('#s2c5').html($('#s2c5f').val());
+              $('#s2c6').html($('#s2c6f').val());
+
+              $('#s3c1').html($('#s3c1f').find(':selected').text());
+              $('#s3c2').html($('#s3c2f').find(':selected').text());
+              $('#s3c3').html($('#s3c3f').val());
+              $('#s3c4').html($('#s3c4f').val());
+              $('#s3c5').html($('#s3c5f').val());
+              $('#s3c6').html($('#s3c6f').val());
+
+              $('#s4c1').html($('#s4c1f').find(':selected').text());
+              $('#s4c2').html($('#s4c2f').find(':selected').text());
+              $('#s4c3').html($('#s4c3f').val());
+              $('#s4c4').html($('#s4c4f').val());
+              $('#s4c5').html($('#s4c5f').val());
+              $('#s4c6').html($('#s4c6f').val());
+
+              $('#s5c1').html($('#s5c1f').find(':selected').text());
+              $('#s5c2').html($('#s5c2f').find(':selected').text());
+              $('#s5c3').html($('#s5c3f').val());
+              $('#s5c4').html($('#s5c4f').val());
+              $('#s5c5').html($('#s5c5f').val());
+              $('#s5c6').html($('#s5c6f').val());
+
+              $('#s6c1').html($('#s6c1f').find(':selected').text());
+              $('#s6c2').html($('#s6c2f').find(':selected').text());
+              $('#s6c3').html($('#s6c3f').val());
+              $('#s6c4').html($('#s6c4f').val());
+              $('#s6c5').html($('#s6c5f').val());
+              $('#s6c6').html($('#s6c6f').val());
+
+              $('#s7c1').html($('#s7c1f').find(':selected').text());
+              $('#s7c2').html($('#s7c2f').find(':selected').text());
+              $('#s7c3').html($('#s7c3f').val());
+              $('#s7c4').html($('#s7c4f').val());
+              $('#s7c5').html($('#s7c5f').val());
+              $('#s7c6').html($('#s7c6f').val());
+
+              $('#studentName').html($('#studentNamef').val());
+              $('#dateIssued').html($('#dateIssuedf').val());
+              $('#dateIssued1').html($('#dateIssuedf').val());
+              $('#dateIssued2').html($('#dateIssuedf').val());
+              $('#classTeacher').html($('#classTeacherf').val());
+              $('#yearTerm').html($('#yearTermf').val());
+              $('#termStart').html($('#termStartf').val());
+              $('#termEnd').html($('#termEndf').val());
+              $('#ptcDate').html($('#ptcDatef').val());
+
+              const dateString1 = $('#dateIssuedf').val();
+              const year1 = +dateString1.substring(0, 4);
+              const month1 = +dateString1.substring(5, 7);
+              const day1 = +dateString1.substring(8, 10);
+
+              const dateString2 = $('#termStartf').val();
+              const year2 = +dateString2.substring(0, 4);
+              const month2 = +dateString2.substring(5, 7);
+              const day2 = +dateString2.substring(8, 10);
+
+              const dateString3 = $('#termEndf').val();
+              const year3 = +dateString3.substring(0, 4);
+              const month3 = +dateString3.substring(5, 7);
+              const day3 = +dateString3.substring(8, 10);
+
+              const dateString4 = $('#ptcDatef').val();
+              const year4 = +dateString4.substring(0, 4);
+              const month4 = +dateString4.substring(5, 7);
+              const day4 = +dateString4.substring(8, 10);
+
+              const date1 = new Date(year1, month1 - 1, day1);
+              const date2 = new Date(year2, month2 - 1, day2);
+              const date3 = new Date(year3, month3 - 1, day3);
+              const date4 = new Date(year4, month4 - 1, day4);
+
+              console.log(date1.toDateString().replace(/^\S+\s/,''))
+              console.log(date2.toDateString().replace(/^\S+\s/,''))
+              console.log(date3.toDateString().replace(/^\S+\s/,''))
+              console.log(date4.toDateString().replace(/^\S+\s/,''))
+
+              $('#dateIssued').html(date1.toDateString().replace(/^\S+\s/,''));
+              $('#dateIssued1').html(date1.toDateString().replace(/^\S+\s/,''));
+              $('#dateIssued2').html(date1.toDateString().replace(/^\S+\s/,''));
+              $('#termStart').html(date2.toDateString().replace(/^\S+\s/,''));
+              $('#termEnd').html(date3.toDateString().replace(/^\S+\s/,''));
+              $('#ptcDate').html(date4.toDateString().replace(/^\S+\s/,''));
+          });
+        </script>
+
+        <script>
+         const formEl = document.getElementById('formAdd');
+         const buttonEl = document.getElementById('buttonAddSubject');
+
+         function onAddSubject(e) {
+             const teacher = document.getElementById('s1c1f');
+             const teacherValue = teacher.options[teacher.selectedIndex].text;
+             const subject = document.getElementById('s1c2f');
+             const subjectValue = subject.options[subject.selectedIndex].text;
+             const test1 = document.getElementById('s1c3f').value;
+             const test2 = document.getElementById('s1c4f').value;
+             const termExam = document.getElementById('s1c5f').value;
+             const letterGrade = document.getElementById('s1c6f').value;
+             const tableBody = document.getElementById('tableBody');
+
+             tableBody.innerHTML +=
+             `<tr>
+               <td>${subjectValue}</td>
+               <td>${teacherValue}</td>
+               <td>${test1}</td>
+               <td>${test2}</td>
+               <td>${termExam}</td>
+               <td>${letterGrade}</td>
+             </tr>
+             `;
+
+         }
+
+         buttonEl.addEventListener('click', onAddSubject);
+
+        </script>
+
+</body>
+
+</html>

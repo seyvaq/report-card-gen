@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'Bjorn';
+  src: url(/fonts/BJORNREGULAR.woff), weight:normal;
+  src: url(/fonts/BJORNLIGHT.woff), weight:lighter;
+}
+
+@font-face {
+  font-family: 'TimesNewRoman';
+  src: url(/fonts/TIMESI.woff), weight:normal;
+}
+
+@font-face {
+  font-family: 'Optima';
+  src: url(fonts/Optima.woff), weight:normal;
+}
+
+.springgate {
+  font-family: 'Bjorn';
+}
+
+.empowering {
+  font-family: 'TimesNewRoman';
+}
+
+@media print {
+
+  .unprintable {
+    display: none;
+  }
+
+  .printable-col {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .printable-ibox {
+    margin: 0 !important;
+  }
+
+  .printable {
+    padding:0 !important;
+  }
+
+  .printable-table th {
+    background: #e7e7e7 !important;
+  }
+
+  .printable-table-body>tbody>tr:nth-child(even)>td {
+   background-color: #f2f2f2 !important;
+ }
+}
